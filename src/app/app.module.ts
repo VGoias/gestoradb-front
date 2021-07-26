@@ -17,10 +17,15 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 
+// tables
+import {MatTableModule} from '@angular/material/table';
+
 // icons
 import {MatIconModule} from '@angular/material/icon';
 
-
+// 
+import { UnityListComponent } from './components/views/unity/unity-list/unity-list.component';
+import { UnityReadComponent } from './components/views/unity/unity-read/unity-read.component';
 
 
 @NgModule({
@@ -29,7 +34,9 @@ import {MatIconModule} from '@angular/material/icon';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    UnityListComponent,
+    UnityReadComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,14 +13,3 @@
     color: rgb(58, 58, 85);
 }
 
-@media(max-width: 450px){
-    .home{
-        width: 70%;
-    }
-}
- 
-@media(max-width: 770px) {
-    .home {
-        width: 90%;
-    }
-}
