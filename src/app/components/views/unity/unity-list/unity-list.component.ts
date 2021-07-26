@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Unity } from '../unity.model';
+import { UnityService } from '../unity.service';
 
 @Component({
   selector: 'app-unity-list',
@@ -7,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnityListComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  unities: Unity[] = []
 
   displayedColumns: string[] = ['id', 'name', 'description', 'actions'];
+
+  constructor(private service: UnityService) { }
+
+  ngOnInit(): void {
+    this.findAll();
+  }
+
+  findAll(){
+    this.service.findAll().subscribe(resposta => {
+      console.log(resposta);
+      this.unities = resposta;
+    })
+  }
 }
