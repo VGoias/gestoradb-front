@@ -24,6 +24,9 @@ import {MatTableModule} from '@angular/material/table';
 // icons
 import {MatIconModule} from '@angular/material/icon';
 
+// buttons
+import {MatButtonModule} from '@angular/material/button';
+
 // 
 import { UnityListComponent } from './components/views/unity/unity-list/unity-list.component';
 import { UnityReadComponent } from './components/views/unity/unity-read/unity-read.component';
@@ -49,7 +52,8 @@ import { UnityReadComponent } from './components/views/unity/unity-read/unity-re
     MatIconModule,
     MatCardModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

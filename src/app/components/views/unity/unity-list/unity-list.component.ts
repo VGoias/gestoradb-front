@@ -11,7 +11,7 @@ export class UnityListComponent implements OnInit {
 
   unities: Unity[] = []
 
-  displayedColumns: string[] = ['id', 'name', 'description', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'description', 'players', 'actions'];
 
   constructor(private service: UnityService) { }
 
