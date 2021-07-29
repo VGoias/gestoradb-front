@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 // header (toolbars)
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -27,9 +28,14 @@ import {MatIconModule} from '@angular/material/icon';
 // buttons
 import {MatButtonModule} from '@angular/material/button';
 
+// inputs
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 // 
 import { UnityListComponent } from './components/views/unity/unity-list/unity-list.component';
 import { UnityReadComponent } from './components/views/unity/unity-read/unity-read.component';
+import { UnityCreateComponent } from './components/views/unity/unity-create/unity-create.component';
 
 
 @NgModule({
@@ -40,7 +46,8 @@ import { UnityReadComponent } from './components/views/unity/unity-read/unity-re
     NavComponent,
     HomeComponent,
     UnityListComponent,
-    UnityReadComponent
+    UnityReadComponent,
+    UnityCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,10 @@ import { UnityReadComponent } from './components/views/unity/unity-read/unity-re
     MatCardModule,
     MatTableModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

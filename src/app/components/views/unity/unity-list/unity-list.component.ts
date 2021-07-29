@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Unity } from '../unity.model';
 import { UnityService } from '../unity.service';
 
@@ -13,7 +14,7 @@ export class UnityListComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'description', 'players', 'actions'];
 
-  constructor(private service: UnityService) { }
+  constructor(private service: UnityService, private router: Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -24,5 +25,9 @@ export class UnityListComponent implements OnInit {
       console.log(resposta);
       this.unities = resposta;
     })
+  }
+
+  newUnity(){
+    this.router.navigate(["unities/create"])
   }
 }
