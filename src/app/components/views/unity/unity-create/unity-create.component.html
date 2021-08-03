@@ -10,19 +10,19 @@
         
         <mat-form-field class="form">
             <mat-label>Nome</mat-label>
-            <input matInput type="text" name="name" placeholder="Ex: Unidade Centro">
+            <input matInput [(ngModel)]="unity.name" type="text" name="name" placeholder="Ex: Unidade Centro">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="form">
             <mat-label>Descrição</mat-label>
-            <textarea matInput type="text" name="description" rows="10" maxlength="1000000" placeholder="Oferecemos os serviços de (...)"></textarea>
+            <textarea matInput [(ngModel)]="unity.description" type="text" name="description" rows="10" maxlength="1000000" placeholder="Oferecemos os serviços de (...)"></textarea>
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
         
         <div class="buttons">
-            <button mat-stroked-button color="primary" class="mat-elevation-z8" (click)="saveUnity()">CRIAR</button>            
-            <button mat-stroked-button color="warn" class="mat-elevation-z8" (click)="listUnity()">CANCELAR</button>
+            <button mat-stroked-button color="primary" class="mat-elevation-z8" (click)="create()">CRIAR</button>            
+            <button mat-stroked-button color="warn" class="mat-elevation-z8" (click)="list()">CANCELAR</button>
         </div>
     </form>
 </div>

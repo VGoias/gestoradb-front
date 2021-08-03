@@ -32,6 +32,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
+// snackBar
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 // 
 import { UnityListComponent } from './components/views/unity/unity-list/unity-list.component';
 import { UnityReadComponent } from './components/views/unity/unity-read/unity-read.component';
@@ -63,7 +66,8 @@ import { UnityCreateComponent } from './components/views/unity/unity-create/unit
     MatButtonModule,
     FormsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
