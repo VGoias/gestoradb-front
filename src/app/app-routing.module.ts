@@ -4,20 +4,23 @@ import { NavComponent } from './components/template/nav/nav.component';
 
 
 import { HomeComponent } from './components/views/home/home.component';
-import { UnityCreateComponent } from './components/views/unity/unity-create/unity-create.component';
 import { UnityListComponent } from './components/views/unity/unity-list/unity-list.component';
+import { UnityCreateComponent } from './components/views/unity/unity-create/unity-create.component';
+import { UnityDeleteComponent } from './components/views/unity/unity-delete/unity-delete.component';
 import { UnityReadComponent } from './components/views/unity/unity-read/unity-read.component';
+
 
 const routes: Routes = [
  // {
    // path: '', component: NavComponent, children: [
       { path: 'home', component: HomeComponent },
 
-      { path: 'unities',           component:   UnityListComponent },
-      { path: 'unities/create',    component:   UnityCreateComponent },
-      { path: 'unities/read/:id',  component:   UnityReadComponent },
+      { path: 'unities',            component:   UnityListComponent },
+      { path: 'unities/create',     component:   UnityCreateComponent },
+      { path: 'unities/read/:id',   component:   UnityReadComponent },
+      { path: 'unities/delete/:id', component:   UnityDeleteComponent },
       
-      { path: 'players',           component:   UnityListComponent },      
+      { path: 'players',            component:   UnityListComponent },      
    // ]
  // }
 ];

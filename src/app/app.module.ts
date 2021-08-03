@@ -39,6 +39,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { UnityListComponent } from './components/views/unity/unity-list/unity-list.component';
 import { UnityReadComponent } from './components/views/unity/unity-read/unity-read.component';
 import { UnityCreateComponent } from './components/views/unity/unity-create/unity-create.component';
+import { UnityDeleteComponent } from './components/views/unity/unity-delete/unity-delete.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { UnityCreateComponent } from './components/views/unity/unity-create/unit
     HomeComponent,
     UnityListComponent,
     UnityReadComponent,
-    UnityCreateComponent
+    UnityCreateComponent,
+    UnityDeleteComponent
   ],
   imports: [
     BrowserModule,

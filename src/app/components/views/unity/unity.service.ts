@@ -17,14 +17,19 @@ export class UnityService {
     private _snack: MatSnackBar) { }
 
   mensagem(str: String): void {
-    this._snack.open(`${str}`, "OK", {
+    this._snack.open(`${str}`, "X", {
       horizontalPosition: 'end',
       verticalPosition: 'top',
-      duration: 3000
+      duration: 6000
     })
   }
 
-  findAll():Observable<Unity[]>{
+  findById(id: String): Observable<Unity>{
+    const url = `${this.baseUrl}/unities/${id}`
+    return this.http.get<Unity>(url)
+  }
+
+  findAll(): Observable<Unity[]>{
     const url = `${this.baseUrl}unities`
     return this.http.get<Unity[]>(url)
   }
@@ -32,6 +37,11 @@ export class UnityService {
   create(unity: Unity): Observable<Unity>{
     const url = `${this.baseUrl}unities`
     return this.http.post<Unity>(url, unity);
+  }
+
+  delete(id: String): Observable<void> {
+    const url = `${this.baseUrl}unities/${id}`
+    return this.http.delete<void>(url)
   }
 
   
