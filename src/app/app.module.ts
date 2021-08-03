@@ -40,6 +40,7 @@ import { UnityListComponent } from './components/views/unity/unity-list/unity-li
 import { UnityReadComponent } from './components/views/unity/unity-read/unity-read.component';
 import { UnityCreateComponent } from './components/views/unity/unity-create/unity-create.component';
 import { UnityDeleteComponent } from './components/views/unity/unity-delete/unity-delete.component';
+import { UnityUpdateComponent } from './components/views/unity/unity-update/unity-update.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { UnityDeleteComponent } from './components/views/unity/unity-delete/unit
     UnityListComponent,
     UnityReadComponent,
     UnityCreateComponent,
-    UnityDeleteComponent
+    UnityDeleteComponent,
+    UnityUpdateComponent
   ],
   imports: [
     BrowserModule,

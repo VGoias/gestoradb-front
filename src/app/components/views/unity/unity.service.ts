@@ -44,5 +44,9 @@ export class UnityService {
     return this.http.delete<void>(url)
   }
 
+  update(unity: Unity): Observable<void>{
+    const url = `${this.baseUrl}unities/${unity.id}`
+    return this.http.put<void>(url, unity)
+  }
   
 }

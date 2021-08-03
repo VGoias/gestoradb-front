@@ -8,6 +8,7 @@ import { UnityListComponent } from './components/views/unity/unity-list/unity-li
 import { UnityCreateComponent } from './components/views/unity/unity-create/unity-create.component';
 import { UnityDeleteComponent } from './components/views/unity/unity-delete/unity-delete.component';
 import { UnityReadComponent } from './components/views/unity/unity-read/unity-read.component';
+import { UnityUpdateComponent } from './components/views/unity/unity-update/unity-update.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'unities/create',     component:   UnityCreateComponent },
       { path: 'unities/read/:id',   component:   UnityReadComponent },
       { path: 'unities/delete/:id', component:   UnityDeleteComponent },
+      { path: 'unities/update/:id', component:   UnityUpdateComponent },
       
       { path: 'players',            component:   UnityListComponent },      
    // ]
