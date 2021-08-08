@@ -9,6 +9,7 @@ import { UnityCreateComponent } from './components/views/unity/unity-create/unit
 import { UnityDeleteComponent } from './components/views/unity/unity-delete/unity-delete.component';
 import { UnityReadComponent } from './components/views/unity/unity-read/unity-read.component';
 import { UnityUpdateComponent } from './components/views/unity/unity-update/unity-update.component';
+import { PlayerReadAllComponent } from './components/views/player/player-read-all/player-read-all.component';
 
 
 const routes: Routes = [
@@ -16,13 +17,14 @@ const routes: Routes = [
    // path: '', component: NavComponent, children: [
       { path: 'home', component: HomeComponent },
 
-      { path: 'unities',            component:   UnityListComponent },
-      { path: 'unities/create',     component:   UnityCreateComponent },
-      { path: 'unities/read/:id',   component:   UnityReadComponent },
-      { path: 'unities/delete/:id', component:   UnityDeleteComponent },
-      { path: 'unities/update/:id', component:   UnityUpdateComponent },
+      { path: 'unities',                    component:   UnityListComponent },
+      { path: 'unities/create',             component:   UnityCreateComponent },
+      { path: 'unities/read/:id',           component:   UnityReadComponent },
+      { path: 'unities/delete/:id',         component:   UnityDeleteComponent },
+      { path: 'unities/update/:id',         component:   UnityUpdateComponent },
       
-      { path: 'players',            component:   UnityListComponent },      
+      { path: 'players',                    component:   UnityListComponent },
+      { path: 'unities/:id_unity/players',  component:   PlayerReadAllComponent },      
    // ]
  // }
 ];

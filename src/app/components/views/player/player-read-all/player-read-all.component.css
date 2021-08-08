@@ -1,0 +1,56 @@
+.info{
+    width: 95%;
+    margin: 0.4rem auto;
+}
+
+.mat-card-title{
+    font-size: 1rem;
+    color: rgb(26, 30, 87);
+}
+
+.mat-card-subtitle{
+    font-size: 0.8rem;
+    color: rgb(58, 58, 85);
+}
+
+.content{
+    width: 90%;
+    margin: 1.4rem auto auto auto;
+}
+
+.content-title{
+    text-align: center;
+}
+
+.content-title h1 {
+    font-size: 1rem;
+    color: rgb(26, 30, 87);
+    font-weight: 600;
+}
+
+.table{
+    width: 100%;
+}
+
+.button{
+    margin-bottom: 0.8rem;
+    color: rgb(26, 30, 87);
+}
+
+.edit{
+    color: rgb(204, 202, 100);
+}
+
+.delete{
+    color: rgb(202, 84, 54);
+    margin-left: 0.5rem;
+}
+
+.players{
+    color: rgb(0, 0, 0);
+    margin-left: 0.3rem;
+}
+
+.mat-actions{
+    width: 5rem;
+}

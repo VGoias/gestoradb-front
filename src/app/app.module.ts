@@ -41,6 +41,7 @@ import { UnityReadComponent } from './components/views/unity/unity-read/unity-re
 import { UnityCreateComponent } from './components/views/unity/unity-create/unity-create.component';
 import { UnityDeleteComponent } from './components/views/unity/unity-delete/unity-delete.component';
 import { UnityUpdateComponent } from './components/views/unity/unity-update/unity-update.component';
+import { PlayerReadAllComponent } from './components/views/player/player-read-all/player-read-all.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { UnityUpdateComponent } from './components/views/unity/unity-update/unit
     UnityReadComponent,
     UnityCreateComponent,
     UnityDeleteComponent,
-    UnityUpdateComponent
+    UnityUpdateComponent,
+    PlayerReadAllComponent
   ],
   imports: [
     BrowserModule,

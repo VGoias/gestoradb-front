@@ -1,15 +1,15 @@
 <mat-card class="info nat-elevation-z4">
     <mat-card-title class="title">SISTEMA DE CONTROLE - UNIDADES ADB</mat-card-title>
-    <mat-card-subtitle class="subtitle">Nessa tela é possível visualizar as unidades cadastradas.</mat-card-subtitle>
+    <mat-card-subtitle class="subtitle">Nessa tela é possível visualizar os jogadores vinculados a Unidade selecionada.</mat-card-subtitle>
 </mat-card>
 <div class="content">
     <div class="content-title">
-        <h1>Lista de Unidades</h1>
+        <h1>Lista de Jogadores</h1>
     </div>
 
     <div class="mat-elevation-z8 content-table">
-        <button mat-stroked-button color="primary" class="button" (click)="newUnity()">NOVA UNIDADE</button>
-        <table class="table" mat-table [dataSource]="unities">
+        <button mat-stroked-button color="primary" class="button" (click)="newPlayer()">NOVO JOGADOR</button>
+        <table class="table" mat-table [dataSource]="players">
 
             <!-- ID Column -->
             <ng-container matColumnDef="id">
@@ -17,24 +17,24 @@
                 <td mat-cell *matCellDef="let row"> {{ row.id }} </td>
             </ng-container>
 
-            <!-- Name Column -->
-            <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef> NOME </th>
-                <td mat-cell *matCellDef="let row"> {{ row.name }} </td>
+            <!-- Nick Column -->
+            <ng-container matColumnDef="nick">
+                <th mat-header-cell *matHeaderCellDef> NICK </th>
+                <td mat-cell *matCellDef="let row"> {{ row.nick }} </td>
             </ng-container>
 
-            <!-- Description Column -->
-            <ng-container matColumnDef="description">
-                <th mat-header-cell *matHeaderCellDef> DESCRIÇÃO </th>
-                <td mat-cell *matCellDef="let row"> {{ row.description }} </td>
+            <!-- Birth Column -->
+            <ng-container matColumnDef="birth">
+                <th mat-header-cell *matHeaderCellDef> NASCIMENTO </th>
+                <td mat-cell *matCellDef="let row"> {{ row.birth }} </td>
             </ng-container>
 
-            <!-- Players Column -->
-            <ng-container matColumnDef="players">
-                <th mat-header-cell *matHeaderCellDef> JOGADORES </th>
+            <!-- Bio Column -->
+            <ng-container matColumnDef="bio">
+                <th mat-header-cell *matHeaderCellDef> BIOGRAFIA </th>
                 <td mat-cell *matCellDef="let row"> 
-                    <a class="players" routerLink="{{ row.id }}/players">
-                        <i class="material-icons">star</i> 
+                    <a class="players" >
+                        <i class="material-icons">book</i> 
                     </a>
                 </td>
             </ng-container>
@@ -43,10 +43,10 @@
             <ng-container matColumnDef="actions">
                 <th mat-header-cell *matHeaderCellDef class="mat-actions"> AÇÕES </th>
                 <td mat-cell *matCellDef="let row" > 
-                    <a class="edit" routerLink="update/{{ row.id }}">
+                    <a class="edit" >
                         <i class="material-icons">edit</i>
                     </a>
-                    <a class="delete" routerLink="delete/{{ row.id }}">
+                    <a class="delete" >
                         <i class="material-icons">delete</i>
                     </a>
                 </td>
