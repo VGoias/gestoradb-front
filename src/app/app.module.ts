@@ -9,7 +9,7 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // header (toolbars)
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -42,6 +42,9 @@ import { UnityCreateComponent } from './components/views/unity/unity-create/unit
 import { UnityDeleteComponent } from './components/views/unity/unity-delete/unity-delete.component';
 import { UnityUpdateComponent } from './components/views/unity/unity-update/unity-update.component';
 import { PlayerReadAllComponent } from './components/views/player/player-read-all/player-read-all.component';
+import { PlayerCreateComponent } from './components/views/player/player-create/player-create.component';
+import { PlayerUpdateComponent } from './components/views/player/player-update/player-update.component';
+import { PlayerDeleteComponent } from './components/views/player/player-delete/player-delete.component';
 
 
 @NgModule({
@@ -56,7 +59,10 @@ import { PlayerReadAllComponent } from './components/views/player/player-read-al
     UnityCreateComponent,
     UnityDeleteComponent,
     UnityUpdateComponent,
-    PlayerReadAllComponent
+    PlayerReadAllComponent,
+    PlayerCreateComponent,
+    PlayerUpdateComponent,
+    PlayerDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +79,8 @@ import { PlayerReadAllComponent } from './components/views/player/player-read-al
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,22 @@
+<mat-card class="info nat-elevation-z4">
+    <mat-card-title class="title">SISTEMA DE CONTROLE - UNIDADES ADB</mat-card-title>
+    <mat-card-subtitle class="subtitle">Nessa tela é possível cadastrar um(a) novo(a) jogador(a) para Unidade selecionada.</mat-card-subtitle>
+</mat-card>
+<div class="content">
+    <div class="content-title">
+        <h1>Cadastrar Jogador(a)</h1>
+    </div>
+    <form>
+        
+        <mat-form-field class="form">
+            <mat-label>Nick</mat-label>
+            <input matInput [(ngModel)]="player.nick" [formControl]="nick" required type="text" name="nick" placeholder="Ex: Neymar" maxlength="15">
+            <mat-error *ngIf="nick.invalid">{{ getMessage() }}</mat-error>
+        </mat-form-field>
+             
+        <div class="buttons">
+            <button [disabled]="getMessage()" mat-stroked-button color="primary" class="mat-elevation-z8" (click)="create()">CRIAR</button>            
+            <button mat-stroked-button color="warn" class="mat-elevation-z8" (click)="list()">CANCELAR</button>
+        </div>
+    </form>
+</div>

@@ -10,6 +10,9 @@ import { UnityDeleteComponent } from './components/views/unity/unity-delete/unit
 import { UnityReadComponent } from './components/views/unity/unity-read/unity-read.component';
 import { UnityUpdateComponent } from './components/views/unity/unity-update/unity-update.component';
 import { PlayerReadAllComponent } from './components/views/player/player-read-all/player-read-all.component';
+import { PlayerCreateComponent } from './components/views/player/player-create/player-create.component';
+import { PlayerUpdateComponent } from './components/views/player/player-update/player-update.component';
+import { PlayerDeleteComponent } from './components/views/player/player-delete/player-delete.component';
 
 
 const routes: Routes = [
@@ -23,8 +26,11 @@ const routes: Routes = [
       { path: 'unities/delete/:id',         component:   UnityDeleteComponent },
       { path: 'unities/update/:id',         component:   UnityUpdateComponent },
       
-      { path: 'players',                    component:   UnityListComponent },
-      { path: 'unities/:id_unity/players',  component:   PlayerReadAllComponent },      
+      { path: 'players',                              component:   UnityListComponent },
+      { path: 'unities/:id_unity/players',            component:   PlayerReadAllComponent }, 
+      { path: 'unities/:id_unity/players/create',     component:   PlayerCreateComponent },      
+      { path: 'unities/:id_unity/players/:id/update', component:   PlayerUpdateComponent },
+      { path: 'unities/:id_unity/players/:id/delete', component:   PlayerDeleteComponent },
    // ]
  // }
 ];

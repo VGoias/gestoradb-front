@@ -33,7 +33,7 @@ export class PlayerReadAllComponent implements OnInit {
   }
 
   newPlayer(){
-    this.router.navigate(["players/create"])
+    this.router.navigate([`unities/${this.id_unity}/players/create`])
   }
 
 }

@@ -21,8 +21,7 @@ export class UnityListComponent implements OnInit {
   }
 
   findAll(){
-    this.service.findAll().subscribe(resposta => {
-      console.log(resposta);
+    this.service.findAll().subscribe(resposta => {      
       this.unities = resposta;
     })
   }
